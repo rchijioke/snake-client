@@ -10,9 +10,42 @@ const connect = function () {
 
   // interpret incoming data as text
   conn.setEncoding("utf8");
-conn.on("connect", () => {
-  console.log("Successfully connected to game server", "Name: wat" )
-});
+  conn.on("connect", () => {
+    //conn.write("Move: down")
+    // setInterval(() => {
+    //   conn.write("Move: left")
+    //   conn.write("Move: down")
+    //   conn.write("Move: right")
+    //   conn.write("Move: up")
+    // }, 1000)
+    setInterval(() => {
+      conn.write("Move: left")
+       setInterval(function() {
+        conn.write("Move: down")
+        setInterval(function() {
+          conn.write("Move: right")
+          // setInterval(function() {
+          //   conn.write("Move: up")    
+           }, 1000);    
+         }, 2000);
+       }, 2000);
+    // }, 1000) 
+  console.log("connection successful")
+  });
+  //multiple callbacks
+  // const conn2 = net.createConnection({
+
+  //   host: "165.227.47.243", // change to IP address of computer, more on that below
+  //   port: 50541,
+  // });
+  // conn2.on("connect", () => {
+  //   //conn.write("Move: down")
+  // setInterval(() => {
+  //     conn.write("Move: down")
+  //   }, 4000)
+  //   console.log("connection successful")
+  // });
+ 
   return conn;
 };
 console.log("Connecting ...");
