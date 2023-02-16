@@ -49,9 +49,6 @@ const connect = function () {
   return conn;
 };
 console.log("Connecting ...");
-const connection = connect();
+connect();
 
-module.exports = {
-  net,
-  connection
-}
+module.exports = {connect}
