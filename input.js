@@ -16,4 +16,21 @@ const handleUserInput = function (data) {
   }
 };
 
+const symbols = [w,a,s,d]
+for (i of symbols){
+  if( )
+}KeyboardEvent
+
+setInterval(() => {
+  .write(w)
+   setInterval(function() {
+    conn.write("Move: down")
+    setInterval(function() {
+      conn.write("Move: right")
+      // setInterval(function() {
+      //   conn.write("Move: up")    
+       }, 1000);    
+     }, 2000);
+   }, 2000);
+
 module.exports = {setupInput}
