@@ -1,4 +1,4 @@
-//const {connect} = require("./client2");
+
 //const {setupInput} = require("./input")
 
 //console.log("Connecting ...");
@@ -20,21 +20,8 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    // conn.write("Move: up")
+    
    
-    // setInterval(() => {
-    //   conn.write("Move: right")
-    // }, 2000); 
-    // setInterval(function() {
-    //   conn.write("Move: left")
-      //   setInterval(function() {
-      //       conn.write("Move: down")
-      //       setInterval(function() {
-      //         conn.write("Move: right")    
-      //        }, 1000);    
-      //      }, 2000);
-      //    }, 2000);
-       //}, 2000) 
     console.log("successfully connected to game server")
     });
   
@@ -44,5 +31,5 @@ const connect = function () {
 console.log("Connecting ...");
 connect();
 
-
+module.exports = connect
 //setupInput()
