@@ -1,7 +1,7 @@
 
 
-const net = require("net");
-const connect = require("./cleint")
+
+const {connect} = require("./client")
 
 
 
@@ -28,8 +28,9 @@ const handleUserInput =(key) => {
 
 setupInput()
 handleUserInput()
+connect()
 
 
 
 
-module.exports = setupInput
+module.exports = {setupInput}
